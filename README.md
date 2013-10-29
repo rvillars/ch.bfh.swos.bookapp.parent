@@ -14,3 +14,4 @@ Technologies used:
 Current State:
 
 - Step01 - Parent/Module project structure with maven.
+- Step02 - JPA model classes and persistence integration tests
