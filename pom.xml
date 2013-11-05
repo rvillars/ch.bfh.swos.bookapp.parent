@@ -7,6 +7,7 @@
   <name>Bookapp Parent</name>
   <modules>
   	<module>ch.bfh.swos.bookapp.domain</module>
+  	<module>ch.bfh.swos.bookapp.service</module>
   </modules>
   
   <build>
