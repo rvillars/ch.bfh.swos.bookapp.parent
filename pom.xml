@@ -8,6 +8,7 @@
   <modules>
   	<module>ch.bfh.swos.bookapp.domain</module>
   	<module>ch.bfh.swos.bookapp.service</module>
+  	<module>ch.bfh.swos.bookapp.rest</module>
   </modules>
   
   <build>

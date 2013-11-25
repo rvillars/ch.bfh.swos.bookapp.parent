@@ -1,7 +1,6 @@
 package ch.bfh.swos.bookapp.service.dto;
 
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * Entity implementation class for Entity: Author
@@ -14,9 +13,6 @@ public class AuthorDTO implements Serializable {
 	private String firstname;
 	private String lastname;
 	private static final long serialVersionUID = 1L;
-	
-	
-	private List<BookDTO> books;
 
 	public AuthorDTO() {
 		super();
@@ -41,12 +37,6 @@ public class AuthorDTO implements Serializable {
 
 	public void setLastname(String lastname) {
 		this.lastname = lastname;
-	}
-	public List<BookDTO> getBooks() {
-		return books;
-	}
-	public void setBooks(List<BookDTO> books) {
-		this.books = books;
 	}
    
 }
