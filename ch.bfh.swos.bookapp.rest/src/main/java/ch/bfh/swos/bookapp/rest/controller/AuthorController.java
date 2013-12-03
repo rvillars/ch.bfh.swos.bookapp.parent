@@ -57,9 +57,9 @@ public class AuthorController {
 	/**
 	 * Update
 	 */
-	@RequestMapping(method = RequestMethod.PUT)
-	@ResponseBody
-	public AuthorDTO updateAuthor(@RequestBody AuthorDTO author) {
+    @RequestMapping(value = "{id}", method = RequestMethod.PUT)
+    @ResponseBody
+    public AuthorDTO update(@RequestBody AuthorDTO author, @PathVariable long id) {
 		AuthorDTO updatedAuthor = authorService.update(author);
 		System.out.println("Author updated with id = " + updatedAuthor.getId());
 		return updatedAuthor;
