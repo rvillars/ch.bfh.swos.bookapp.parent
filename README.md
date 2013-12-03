@@ -17,3 +17,4 @@ Current State:
 - Step02 - JPA model classes and persistence integration tests
 - Step03 - Spring Data repositories and service layer with DTO mapping
 - Step04 - Spring MVC REST controllers and web configuration
+- Step05 - Basic AngularJS views and scripts 

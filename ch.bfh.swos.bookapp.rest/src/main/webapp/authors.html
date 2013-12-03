@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <title>BFH BookApp REST</title>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.0.1/angular-1.0.1.min.js"></script>
+    <script type="text/javascript" src="http://code.angularjs.org/1.0.1/angular-resource-1.0.1.min.js"></script>
+    
+    <script type="text/javascript" src="js/application.js"></script>
+    <script type="text/javascript" src="js/controllers.js"></script>
+    <script type="text/javascript" src="js/services.js"></script>
+
+    <link rel="stylesheet" type="text/css"
+          href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/themes/base/jquery-ui.css">
+</head>
+
+<body ng-app="bookapp">
+
+<h2>Current Author</h2>
+
+<div ng-controller="AuthorController">
+
+    <form id="form">
+        <label for="firstname">Firstname</label>
+        <input id="lastname" ng-model="currentAuthor.firstname"/>
+        <br/>
+        <label for="lastname">Lastname</label>
+        <input id="lastname" ng-model="currentAuthor.lastname" />
+        <br/>
+        <label for="id">Id</label>
+        <input id="id" disabled="disabled" ng-model="currentAuthor.id"/>
+        <br/>
+        <button id="save" ng-click="save()">Save Author</button>
+        <button id="cancel" ng-click="cancel()">Cancel</button>
+    </form>
+
+    <h2>Authors</h2>
+
+    <form id="list">
+        <input id="showId" type="checkbox"/>
+        <label for="showId">Show Id</label>
+        <table id="table" border="1">
+            <thead>
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Id</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="author in authors">
+                <td>{{author.firstname}}</td>
+                <td>{{author.lastname}}</td>
+                <td >{{author.id}}</td>
+                <td><button id="edit" ng-click="edit(author)">Edit</button></td>
+                <td><button id="delete" ng-click="remove($index, author.id)">Delete</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </form>
+
+</div>
+</body>
+</html>
